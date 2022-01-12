@@ -15,10 +15,12 @@
 // person.name = 'dell lee';
 // console.log(person.name);
 
+//单例模式
 class Demo {
   private static instance: Demo;
   private constructor(public name: string) {}
-
+  //类使用属性方法时写成static不是public
+  //static属性直接挂载在类上而不是实例上
   static getInstance() {
     if (!this.instance) {
       this.instance = new Demo('dell lee');

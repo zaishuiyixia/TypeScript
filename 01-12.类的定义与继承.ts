@@ -10,6 +10,7 @@ class Teacher extends Person {
     return 'Teacher';
   }
   getName() {
+    //在子类中重写了父类的方法之后，还想要调用父类的方法时，用super来调用原来父类的方法
     return super.getName() + 'lee';
   }
 }
