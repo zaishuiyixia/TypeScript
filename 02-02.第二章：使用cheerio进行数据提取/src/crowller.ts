@@ -1,4 +1,4 @@
-// ts -> .d.ts 翻译文件 @types/superagent -> js
+// ts -> .d.ts 类型定义/翻译 文件 @types/superagent -> js
 import superagent from 'superagent';
 import cheerio from 'cheerio';
 

@@ -33,5 +33,7 @@ class Crowller {
 const secret = 'secretKey';
 const url = `http://www.dell-lee.com/typescript/demo.html?secret=${secret}`;
 
+// 单例模式：不能被类外部实例化
+// 单例起到的作用：避免重复创建相同方法
 const analyzer = DellAnalyzer.getInstance();
 new Crowller(url, analyzer);

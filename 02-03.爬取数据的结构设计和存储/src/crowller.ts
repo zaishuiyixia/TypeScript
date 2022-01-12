@@ -49,9 +49,12 @@ class Crowller {
     return result.text;
   }
 
+  // 将新爬取的内容进行存储
   generateJsonContent(courseInfo: CourseResult) {
+    // 生成文件的绝对路径
     const filePath = path.resolve(__dirname, '../data/course.json');
     let fileContent: Content = {};
+    // 判断文件是否存在，如果存在读取文件的内容
     if (fs.existsSync(filePath)) {
       fileContent = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     }
@@ -61,9 +64,13 @@ class Crowller {
 
   async initSpiderProcess() {
     const filePath = path.resolve(__dirname, '../data/course.json');
+    // 爬取网页的html
     const html = await this.getRawHtml();
+    // 提取需要的数据
     const courseInfo = this.getCourseInfo(html);
+    // 将新爬取的内容合并
     const fileContent = this.generateJsonContent(courseInfo);
+    // 将爬到的数据存储到json文件中
     fs.writeFileSync(filePath, JSON.stringify(fileContent));
   }
 
