@@ -22,3 +22,5 @@ const obj = {
   name: 'dell',
   age: 18
 };
+
+export {}

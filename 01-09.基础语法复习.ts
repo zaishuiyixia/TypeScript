@@ -3,10 +3,12 @@ let count: number;
 count = 123;
 
 // 对象类型, {}, Class, function, []
+// 写法一
 const func = (str: string) => {
   return parseInt(str, 10);
 };
 
+// 写法二:冒号后面跟的是类型，等号后面跟的是具体的实现
 const func1: (str: string) => number = str => {
   return parseInt(str, 10);
 };

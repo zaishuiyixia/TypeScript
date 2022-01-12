@@ -1,8 +1,8 @@
-// 基础类型 null, undefined, symbol, boolean, void
+// 基础类型 string, number, null, undefined, symbol, boolean, void
 const count: number = 123;
 const teacherName: string = 'Dell';
 
-// 对象类型
+// 对象类型：对象、数组、类、函数
 
 class Person {}
 
