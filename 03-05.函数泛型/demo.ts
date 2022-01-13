@@ -8,7 +8,7 @@ function anotherJoin<T>(first: T, second: T): T {
   return first;
 }
 
-// T[]
+// T[] 等价 Array<T>
 function map<T>(params: Array<T>) {
   return params;
 }

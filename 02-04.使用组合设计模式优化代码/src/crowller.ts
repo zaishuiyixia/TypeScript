@@ -6,6 +6,7 @@ import DeeAnalyzer from './dellAnalyzer';
 
 export interface Analyzer {
   analyze: (html: string, filePath: string) => string;
+  // analyze(html: string, filePath: string): string;
 }
 // Crowller主要负责读取html内容、存文件这种爬虫通用的步骤，至于拿到内容具体分析提取存储数据的过程不同的爬虫需求不同，所以这部分逻辑抽离出去放到单独的文件中
 // 所以针对之前的爬虫代码可以拆分成两部分：

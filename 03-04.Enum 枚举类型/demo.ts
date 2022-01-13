@@ -1,10 +1,12 @@
+// 枚举类型，可以自定义数字,默认从0开始依次往后+1
 enum Status {
   OFFLINE = 1,
   ONLINE,
   DELETED
 }
 
-console.log(Status.OFFLINE, Status[0]);
+// 枚举类型正向引用和反向引用都可以
+console.log(Status.OFFLINE, Status[0], Status[1]);
 
 // const Status = {
 //   OFFLINE: 0,

@@ -21,3 +21,6 @@ const dell: Person = new Person();
 const getTotal: () => number = () => {
   return 123;
 };
+
+
+export {}
