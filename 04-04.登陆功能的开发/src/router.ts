@@ -40,6 +40,7 @@ router.get('/', (req: Request, res: Response) => {
 
 router.get('/logout', (req: Request, res: Response) => {
   if (req.session) {
+    //删除session
     req.session.login = undefined;
   }
   res.redirect('/');
@@ -52,6 +53,9 @@ router.post('/login', (req: RequestWithBody, res: Response) => {
     res.send('已经登陆过');
   } else {
     if (password === '123' && req.session) {
+      //给浏览器返回cookie，同时服务器设置session
+      // 使用req.session 设置值后，在浏览器端就可以看到对应的cookie值。
+      // 同时在每次请求的时候，cookie会被写入request.header中，带到服务器端
       req.session.login = true;
       res.send('登陆成功');
     } else {

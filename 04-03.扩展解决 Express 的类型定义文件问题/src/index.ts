@@ -4,6 +4,7 @@ import router from './router';
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
+//自定义中间件，给req增加teacherName属性
 app.use((req: Request, res: Response, next: NextFunction) => {
   req.teacherName = 'dell';
   next();

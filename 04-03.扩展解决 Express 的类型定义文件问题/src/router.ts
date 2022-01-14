@@ -1,7 +1,7 @@
 import { Router, Request, Response } from 'express';
 import Crowller from './crowller';
 import DellAnalyzer from './dellAnalyzer';
-
+//通过类型扩展解决 问题1: express 库的类型定义文件 .d.ts 文件类型描述不准确
 interface RequestWithBody extends Request {
   body: {
     [key: string]: string | undefined;
