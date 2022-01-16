@@ -1,5 +1,6 @@
 export function controller(target: any) {
   for (let key in target.prototype) {
+    console.log('key', key)
     console.log(Reflect.getMetadata('path', target.prototype, key));
   }
 }

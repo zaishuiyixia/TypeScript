@@ -1,3 +1,4 @@
+// 类本身的构造函数先执行，装饰器中对构造函数的改造后执行。
 function testDecorator() {
   return function<T extends new (...args: any[]) => any>(constructor: T) {
     return class extends constructor {

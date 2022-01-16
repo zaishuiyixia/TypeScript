@@ -16,6 +16,7 @@ export class LoginController {
   @post('/login')
   login(req: BodyRequest, res: Response): void {
     const { password } = req.body;
+    //由于LoginController没有被实例化，所以this是undefined，要想获取isLogin方法，要将isLogin写成静态方法
     const isLogin = LoginController.isLogin(req);
     if (isLogin) {
       res.json(getResponseData(false, '已经登陆过'));

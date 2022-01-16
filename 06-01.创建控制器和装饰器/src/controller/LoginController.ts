@@ -8,7 +8,7 @@ interface BodyRequest extends Request {
 
 @controller
 class LoginController {
-  @get('/login')
+  // @get('/login')
   login() {}
 
   @get('/')

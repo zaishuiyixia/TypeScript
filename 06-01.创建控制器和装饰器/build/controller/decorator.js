@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 function controller(target) {
     for (var key in target.prototype) {
+        console.log('key', key);
         console.log(Reflect.getMetadata('path', target.prototype, key));
     }
 }

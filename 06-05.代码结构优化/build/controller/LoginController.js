@@ -21,6 +21,7 @@ var LoginController = /** @class */ (function () {
     };
     LoginController.prototype.login = function (req, res) {
         var password = req.body.password;
+        //由于LoginController没有被实例化，所以this是undefined，要想获取isLogin方法，要将isLogin写成静态方法
         var isLogin = LoginController_1.isLogin(req);
         if (isLogin) {
             res.json(util_1.getResponseData(false, '已经登陆过'));

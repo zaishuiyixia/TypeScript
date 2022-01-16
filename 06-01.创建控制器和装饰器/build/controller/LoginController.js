@@ -14,6 +14,7 @@ var decorator_1 = require("./decorator");
 var LoginController = /** @class */ (function () {
     function LoginController() {
     }
+    // @get('/login')
     LoginController.prototype.login = function () { };
     LoginController.prototype.home = function (req, res) {
         var isLogin = req.session ? req.session.login : false;
@@ -24,12 +25,6 @@ var LoginController = /** @class */ (function () {
             res.send("\n      <html>\n        <body>\n          <form method=\"post\" action=\"/login\">\n            <input type=\"password\" name=\"password\" />\n            <button>\u767B\u9646</button>\n          </form>\n        </body>\n      </html>\n    ");
         }
     };
-    __decorate([
-        decorator_1.get('/login'),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], LoginController.prototype, "login", null);
     __decorate([
         decorator_1.get('/'),
         __metadata("design:type", Function),
